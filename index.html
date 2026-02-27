@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Portal</title>
+</head>
+<body>
+
+<h2>Live Result Checking</h2>
+
+<form method="POST">
+    Enter Hall Ticket:
+    <input type="text" name="hallticket">
+    <button type="submit">Check</button>
+</form>
+
+{% if student %}
+    <h3>Result Found</h3>
+    <p>Name: {{ student.name }}</p>
+    <p>Marks: {{ student.marks }}</p>
+    <p>Status: {{ student.status }}</p>
+{% endif %}
+
+</body>
+</html>
